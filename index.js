@@ -12,6 +12,7 @@ const n= images.length;
 const flexcontainer = document.getElementById('flex-container');
 const leftbutton = document.getElementById('left-btn');
 const rightbutton = document.getElementById('right-btn');
+const carouselNav = document.getElementById('carousel-nav');
 
 const containerwidth = 80 ;
 const flexcontainerwidth = n*containerwidth;
@@ -22,6 +23,17 @@ for(let i = 0; i<n; i++) {
     newimg.src = images[i];
     newimg.classList.add('img-style');
 flexcontainer.appendChild(newimg);
+
+const dotdiv = document.createElement('div');
+dotdiv.classList.add('carousel-dot');
+carouselNav.appendChild(dotdiv);
+dotdiv.addEventListener('click',() => {
+  const index =  [...carouselNav.children].indexOf(event.target);
+  currentposition = index;
+  showimg()
+})
+
+
 }
 
 let currentposition = 0;
@@ -39,10 +51,13 @@ rightbutton.addEventListener('click',()=>{
     }
 });
 
-function showimg(){
+function showimg(){ 
+
+  /*  const prevdot = carouselNav.children[currentposition];
+    prevdot.classList.remove('active'); */
+
     const translatexdistance = -currentposition * containerwidth ;
-    
+    flexcontainer.style.transform =`translateX(${translatexdistance}vw)`;
 }
-const p = 160;
-flexcontainer.style.transform ='translateX(${p}vw)'
+
 
