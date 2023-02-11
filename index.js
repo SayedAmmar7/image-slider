@@ -29,32 +29,42 @@ dotdiv.classList.add('carousel-dot');
 carouselNav.appendChild(dotdiv);
 dotdiv.addEventListener('click',() => {
   const index =  [...carouselNav.children].indexOf(event.target);
-  currentposition = index;
-  showimg()
+  
+  showimg(index)
 })
 
 
 }
 
 let currentposition = 0;
+
 leftbutton.addEventListener('click',()=>{
     if(currentposition>0){
-        currentposition--;
-        showimg();
+        
+        showimg(currentposition-1);
+    }
+    else{
+        showimg(n-1);
     }
 });
 
 rightbutton.addEventListener('click',()=>{
     if(currentposition < n-1 ){
-        currentposition++;
-        showimg();
+        
+        showimg(currentposition+1);
+    }
+    else{
+        showimg(0)
     }
 });
 
-function showimg(){ 
+function showimg(position){ 
 
-  /*  const prevdot = carouselNav.children[currentposition];
-    prevdot.classList.remove('active'); */
+    const prevdot = carouselNav.children[currentposition];
+    prevdot.classList.remove('active'); 
+    currentposition = position;
+    const curdot = carouselNav.children[currentposition];
+    curdot.classList.add('active');
 
     const translatexdistance = -currentposition * containerwidth ;
     flexcontainer.style.transform =`translateX(${translatexdistance}vw)`;

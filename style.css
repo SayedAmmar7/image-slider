@@ -42,11 +42,16 @@
     display: flex;
     height: 100%;
     background-color: aqua;
+    transition: 0.4s ease;
+
+
 }
 
 .img-style{
     aspect-ratio: 16/9;
     object-fit: cover;
+    
+
 }
 .carousel-nav{
     position: absolute;
@@ -63,8 +68,9 @@
     height: 10px;
     border-radius: 50%;
     background-color: gainsboro;
+    transition: 0.4s ease;
 }
 
 .carousel-dot.active{
-    background-color: white;
+    background-color: black;
 }
