@@ -1,4 +1,6 @@
 # Image Slider Website
+![image slider screenshot](https://user-images.githubusercontent.com/124479802/220610111-0b034608-59fd-4b0e-b824-dc5561a550b0.jpg)
+
 This is a simple website for displaying images in a slideshow format using JavaScript.
 
 ## Features
