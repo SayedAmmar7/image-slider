@@ -4,8 +4,8 @@ This is a simple website for displaying images in a slideshow format using JavaS
 ## Features
 - The website displays images in a slideshow format.
 - The user can manually navigate the slideshow using the previous and next buttons.
-- The slideshow automatically advances to the next image after a set amount of time.
-- The user can click on an image to view it in a larger size.
+- The user can manually navigate the slideshow by clicking on the dot at the bottom of an image.
+
 ### Technologies Used
 - HTML
 - CSS
@@ -16,7 +16,7 @@ This is a simple website for displaying images in a slideshow format using JavaS
 - bash
 - Copy code
 - git clone https://github.com/SayedAmmar7/image-slider
-- cd image-slider-website
+- cd image-slider
 - open index.html
 ## Usage
 - To use the image slider, simply navigate to the website and manually navigate the slideshow using the previous and next buttons or by clicking on the dot at the bottom of an image. 
